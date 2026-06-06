@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeCheck - Music Player</title>
+    <link rel="stylesheet" href="musicplayer.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Playlist -->
+        <div class="playlist">
+            <h2>🎵 Playlist</h2>
+
+            <ul id="playlist">
+                <li class="active" data-index="0">
+                    Love Ya - Diljit Doshanj
+                </li>
+
+                <li data-index="1">
+                    Nafrat - Darshan Raval
+                </li>
+
+                <li data-index="2">
+                    Ratiyaan - Hansika Pratik
+                </li>
+            </ul>
+        </div>
+
+        <!-- Music Player -->
+        <div class="player">
+
+            <h1 class="logo">🎧 VibeCheck</h1>
+            <p class="tagline">Feel Every Beat</p>
+
+            <!-- Album Cover -->
+            <div class="cover-container">
+                <img id="cover"
+                    src="IMG_20240309_141237_318.webp"
+                    alt="Album Cover">
+
+                <!-- Equalizer Animation -->
+                <div class="equalizer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <!-- Song Info -->
+            <div class="song-info">
+                <h2 id="title">Love ya</h2>
+                <p id="artist">Diljit Doshanj</p>
+            </div>
+
+            <!-- Progress -->
+            <div class="progress-container" id="progress-container">
+                <div class="progress" id="progress"></div>
+            </div>
+
+            <div class="time">
+                <span id="current-time">0:00</span>
+                <span id="duration">3:22</span>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls">
+
+                <button id="shuffle">
+                    <i class="fas fa-random"></i>
+                </button>
+
+                <button id="prev">
+                    <i class="fas fa-backward"></i>
+                </button>
+
+                <button id="play">
+                    <i class="fas fa-play"></i>
+                </button>
+
+                <button id="next">
+                    <i class="fas fa-forward"></i>
+                </button>
+
+                <button id="repeat">
+                    <i class="fas fa-redo"></i>
+                </button>
+
+            </div>
+
+            <!-- Volume -->
+            <div class="volume-section">
+                <i class="fas fa-volume-up"></i>
+
+                <input
+                    type="range"
+                    id="volume"
+                    min="0"
+                    max="1"
+                    step="0.01"
+                    value="1">
+            </div>
+
+            <!-- Autoplay Status -->
+            <div class="autoplay">
+                <p>✅ Autoplay Enabled</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Audio -->
+    <audio id="audio"></audio>
+
+    <script src="musicplayer.js"></script>
+
+</body>
+</html>
